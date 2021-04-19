@@ -28,7 +28,8 @@ public class Pair <T> {
 	    return "First: " + first + "\nSecond: " + second;
 	}
 
-	public boolean equals(Pair<?> obj) {
+	@Override
+	public boolean equals(Object obj) {
 		if (obj instanceof Pair<?>) {
 			Pair<?> other = (Pair<?>) obj;
 			if (!this.first.equals(other.first) && (!this.first.equals(other.second))) {
